@@ -1,0 +1,123 @@
+:root {
+    --oranje: #D89E39;
+    --creme: #F1E9DE;
+    --bruin: #793425;
+    --blauw: #465591;
+    --roze: #C56E78;
+}
+
+body {
+    background-color: var(--oranje);
+}
+
+main {
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+}
+
+main h1 {
+    text-align: center;
+    color: var(--creme);
+}
+
+main h2 {
+    text-align: center;
+    text-decoration: solid;
+    text-decoration-line: underline;
+    color: var(--creme);
+}
+
+main h3 {
+    color: var(--roze);
+    text-align: center;
+}
+
+section {
+    color: var(--roze);
+    max-width: 290px;
+    align-self: self-end;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+    background-color: var(--creme);
+    margin: 1em;
+    max-width: fit-content;
+    color: var(--roze);
+}
+
+.card img {
+    max-width: 290px;
+}
+
+nav {
+    background-color: var(--bruin);
+    position: sticky;
+    top: 0px;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+}
+
+.card section {
+    padding-top: 0.5em;
+    padding-bottom: 2em;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: var(--creme);
+}
+
+
+.logo {
+    max-width: 50px;
+}
+
+.nav-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-content: end;
+    list-style: none;
+    direction: rtl;
+}
+
+footer {
+    background-color: var(--bruin);
+    align-content: center;
+    padding: 1em;
+    color: var(--creme);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--creme);
+}
+
+.bestelling {
+    list-style: none;
+}
+
+.card-description {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.card-description section em {
+    font-size: 1.5em;
+}
+
+.history {
+    padding-left: 5%;
+}
+
+.no-style {
+    list-style: none;
+}
