@@ -1,11 +1,11 @@
 <?php
-$naam = 'Voornaam Achternaam';
+$naam = 'Sedef Bulut';
 
 
 $vandaag = date_create('now');
-$datum = $vandaag->format('d-m-Y');
+$datum = $vandaag->format('d-F-Y');
 
-// $_GET['Voornaam']
+//$_GET['Voornaam']
 
 
 ?>
@@ -20,7 +20,7 @@ $datum = $vandaag->format('d-m-Y');
     Het is vandaag <?= $datum ?>.
 
     <?php
-echo 'Hello '. $_GET["naam"] .'!';
+//echo 'Hello '. $_GET["naam"] .'!';
 ?>
 
 </body>

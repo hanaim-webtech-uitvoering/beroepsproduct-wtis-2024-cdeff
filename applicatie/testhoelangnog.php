@@ -3,23 +3,15 @@ $naam = 'voornaam achternaam';
 $vandaag = date_create('now');
 $datum = $vandaag->format('d-m-Y');
 
-$eindDatum;
+$maaksinterklaas = date_create('06-12-2024');
+$sinterklaas = $maaksinterklaas->format('d-m-Y');
 
-if($eindDatum)
-$urlDatumString = isset($_GET['eindDatum'])
-$urlDatumToString = strtotime($urlDatumString);
-
-$urlDatumFormated = $urlDatumToString->format('d-m-Y');
-
-var_dump($urlDatum);
-
-$verschil = date_diff($vandaag, $urlDatum);
-
-$verschilInDagen = $verschil->d;
-
-$verschilInUren = $verschil->h;
+$verschil = date_diff($vandaag, $maaksinterklaas);
 
 $start = $_GET['startdatum'];
+// $startdatum = $start->format('d-m-Y')
+
+// $dag = $verschil ->number_format(2)
 
 ?>
 <!DOCTYPE html>
@@ -29,15 +21,22 @@ $start = $_GET['startdatum'];
     <title>PHP voorbeeld</title>
 </head>
 <body>
+    Hallo <?= $naam ?>.<br>
     Het is vandaag <?= $datum ?>.<br>
-    Het duurt nog <?= $verschilInDagen ?> dagen en <?= $verschilInUren ?> uren.<br>
 
+    <?php
+echo 'Op '. $sinterklaas .' is het in Sinterklaas';
+?> .<br>
 
 <?php
-echo 'Nog '. $verschilInDagen .'uren tot sinterklaas';
+echo 'Nog '. $verschil->h .'uren tot sinterklaas';
 ?>
 
 <form action="" method="get" class="inlog">
+            <div>
+                <label for="startdatum">Startdatum</label>
+                <input type="date" name="startdatum" id="startdatum">
+            </div>
             <div>
                 <label for="einddatum">einddatum</label>
                 <input type="text" name="einddatum" id="eindatum">
