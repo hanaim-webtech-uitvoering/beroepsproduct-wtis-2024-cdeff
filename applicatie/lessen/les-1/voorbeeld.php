@@ -1,11 +1,13 @@
 <?php
+// om dit werkend te hebben moet je het naar de folder applicatie verschijven
+//http://localhost:8080/voorbeeld.php?naam
 $naam = 'Sedef Bulut';
 
 
 $vandaag = date_create('now');
 $datum = $vandaag->format('d-F-Y');
 
-//$_GET['Voornaam']
+$_GET['naam']
 
 
 ?>
@@ -20,7 +22,8 @@ $datum = $vandaag->format('d-F-Y');
     Het is vandaag <?= $datum ?>.
 
     <?php
-//echo 'Hello '. $_GET["naam"] .'!';
+echo 'Hello '. $_GET['naam'] .'!';
+//?naam=Sedef om dit werkend te hebben
 ?>
 
 </body>
